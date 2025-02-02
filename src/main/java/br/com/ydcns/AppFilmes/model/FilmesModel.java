@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name= "Lista de Filmes")
-public class ListaFilmes {
+public class FilmesModel {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,9 +24,9 @@ public class ListaFilmes {
 	@Column(nullable = false)
 	private Integer anoLancamento;
 	
-	public ListaFilmes( ) {}
+	public FilmesModel( ) {}
 
-	public ListaFilmes(Long id, String titulo, String genero, Integer anoLancamento) {
+	public FilmesModel(Long id, String titulo, String genero, Integer anoLancamento) {
 		this.id = id;
 		this.titulo = titulo;
 		this.genero = genero;
