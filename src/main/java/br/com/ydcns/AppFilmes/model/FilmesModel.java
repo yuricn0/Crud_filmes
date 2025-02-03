@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name= "Lista de Filmes")
+@Table(name= "ListaFilmes")
 public class FilmesModel {
 	
 	@Id 
@@ -26,8 +26,7 @@ public class FilmesModel {
 	
 	public FilmesModel( ) {}
 
-	public FilmesModel(Long id, String titulo, String genero, Integer anoLancamento) {
-		this.id = id;
+	public FilmesModel(String titulo, String genero, Integer anoLancamento) {
 		this.titulo = titulo;
 		this.genero = genero;
 		this.anoLancamento = anoLancamento;
