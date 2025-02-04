@@ -1,4 +1,4 @@
-package br.com.ydcns.AppFilmes.model;
+package br.com.ydcns.AppFilmes.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
