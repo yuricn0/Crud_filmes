@@ -7,5 +7,5 @@ import br.com.ydcns.AppFilmes.models.FilmesModel;
 
 @Repository
 public interface FilmesRepository extends JpaRepository<FilmesModel, Long> {
-	
+	boolean existsByTitulo(String titulo);
 }
