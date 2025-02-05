@@ -1,6 +1,6 @@
 # Crud_Filmes
 
-Esse projeto é uma aplicação que permite realizar operações de CRUD (Create, Read, Update, Delete) em uma lista de filmes. Desenvolvido em Java utilizando o framework Spring Boot, a aplicação oferece uma interface RESTful para gerenciar informações de filmes.
+Esse projeto é uma aplicação que permite realizar operações de CRUD (Create, Read, Update, Delete) em uma lista de filmes. Desenvolvido em Java utilizando o framework Spring Boot, a aplicação é uma api RESTful que gerencia informações de filmes.
 
 ## Funcionalidades
 
