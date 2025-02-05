@@ -28,7 +28,7 @@ public class FilmesService {
 	        new FilmesModel("Matrix", "Ficção Científica", 1999)
 		            );
 	    filmesRepository.saveAll(filmes);
-		}
+	}
 	
 	public FilmesModel criarFilme(FilmesModel filme) {
 		String tituloFormatado = filme.getTitulo().trim();
@@ -60,5 +60,17 @@ public class FilmesService {
 		}
 		filmesRepository.deleteById(id);
 	}
-}
+
+	public FilmesModel atualizarFilme(Long id, FilmesModel filme) {
+		   FilmesModel filmeExistente = filmesRepository.findById(id)
+				.orElseThrow(() -> new FilmesNaoEncontradosException(id));
+		
+			filmeExistente.setTitulo(filme.getTitulo());
+			filmeExistente.setGenero(filme.getGenero());
+			filmeExistente.setAnoLancamento(filme.getAnoLancamento());
+			
+			return filmesRepository.save(filmeExistente);
+		}
+	}
+
 	

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,6 +39,13 @@ public class FilmesController {
 	public ResponseEntity<FilmesModel> buscarPorId(@PathVariable Long id) {
 		  FilmesModel filme = filmesService.buscarPorId(id).get();
 		  return ResponseEntity.ok(filme);
+	}
+	
+	@PutMapping("filmes/{id}")
+	public ResponseEntity<String> atualizarFilme(@PathVariable Long id, @RequestBody FilmesModel filme) {
+		filmesService.atualizarFilme(id, filme);
+		return ResponseEntity.ok("Filme atualizado com sucesso");
+		
 	}
 	
 	@DeleteMapping("filmes/{id}")
